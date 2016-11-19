@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rubyc_development
+  pool: 5
+  username: ptest
+  password: 12345
+  host: localhost
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rubyc_test
+  pool: 5
+  username: ptest
+  password: 12345
+  host: localhost

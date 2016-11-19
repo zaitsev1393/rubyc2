@@ -1,0 +1,22 @@
+.profile-author
+  =@user.email
+
+.big
+  Last activity
+
+-if @events.count != 0
+  %table.table.table-striped.table-hover
+    %tr
+      %th
+        Address
+      %th
+        Created
+      -@events.each do |event|
+        %tr
+          %td
+            =event.name
+          %td
+            =time_ago_in_words(event.created_at)
+-else 
+  %p
+    Nothing else happened

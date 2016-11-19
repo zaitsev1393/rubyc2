@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Rubyc
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    -if current_user
+      .big2
+        ="Current_user id: #{current_user.id}"
+      .big2
+        ="Current_user name: #{current_user.email}"
+      .big2
+        ="Prev. page: #{request.referer}"
+      .big2
+        ="Curr. page: #{request.url}"
+      .big2
+        ="Controller#action: #{params.to_h.values.join('#')}"
+
+
+
+    =render 'layouts/shared/navbar'
+    .layout
+      = yield
+
+    =render 'layouts/shared/footer'

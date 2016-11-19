@@ -1,0 +1,39 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.comment-block {
+	background-color: azure;
+	margin: 0 auto;
+	width: 400px;
+	height: 75px;
+	//border: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.comment-author {
+	padding-left: 10px;
+	padding-top: 10px;
+
+	a {
+		font-size: 16px;
+		font-weight: bold;
+		color: DarkSlateBlue;
+	}
+}
+
+.comment {
+	padding-left: 25px;
+	font-size: 14px;
+}
+
+.delete-button {
+	float: right;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	&:hover {
+		color: purple;
+	}
+}

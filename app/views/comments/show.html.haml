@@ -1,0 +1,10 @@
+.big
+  =link_to @user.email, user_path(@user)
+
+%table.table.table-striped.table-hover
+  %tr
+    %th
+      Text
+    %th
+      Created
+  =render @comments

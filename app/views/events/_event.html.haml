@@ -1,0 +1,12 @@
+%table.table.table-striped.table-hover
+  %tr
+    %th
+      Address
+    %th
+      Created
+    -@events.each do |event|
+      %tr
+        %td
+          =event.name
+        %td
+          =time_ago_in_words(event.created_at)

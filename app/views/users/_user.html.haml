@@ -1,0 +1,13 @@
+%tr
+  %th
+    =link_to user.email, user_path(user.id)
+  %th
+    =link_to "Navigation", user_path(user.id)
+  %th
+    =time_ago_in_words user.last_sign_in_at
+  %th
+    =time_ago_in_words user.last_sign_out_at
+  %th
+    =link_to "Comments", comment_path(user.id)
+  %th
+    =link_to "Likes", like_path(user.id)

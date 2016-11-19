@@ -1,0 +1,27 @@
+%nav.navbar.navbar-light.bg-faded
+  %ul.nav.navbar-nav
+    %li.nav-item.active.big
+      %a.nav-link{:href => root_path}
+        %b Cats'N'Tits
+        %span.sr-only (current)
+    %li.nav-item
+      =link_to "Categories", categories_path
+    %li.nav-item
+      =link_to "Pictures", pictures_path
+    %li.nav-item
+      =link_to "Users", users_path
+    -if current_user
+      %li.nav-item
+        =link_to "Events", events_path
+      %li.nav-item
+        =link_to "Profile", user_path(current_user.id)
+  %ul.nav.navbar-nav.navbar-right
+
+    -if current_user
+      %li.nav-item.navbar-margin
+        =link_to'Log Out', destroy_user_session_path, :method => :delete
+    - else
+      %li.nav-item
+        =link_to'Log In', new_user_session_path
+      %li.nav-item.navbar-margin
+        =link_to 'Sign Up', new_user_registration_path
