@@ -17,6 +17,9 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'haml'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'byebug', platform: :mri
