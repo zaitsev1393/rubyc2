@@ -1,16 +1,16 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: rubyc_development
+  database: cat_development
   pool: 5
-  username: ptest
+  username: cat
   password: 12345
   host: localhost
 test:
   adapter: postgresql
   encoding: unicode
-  database: rubyc_test
+  database: cat_test
   pool: 5
-  username: ptest
+  username: cat
   password: 12345
   host: localhost

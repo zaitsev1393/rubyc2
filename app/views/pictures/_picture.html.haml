@@ -1,3 +1,4 @@
 .image-center
-  =link_to image_tag(picture.url, class: "middle-img"), picture_path(picture.id)
+  =if picture.category
+    =link_to image_tag(picture.url, class: "middle-img"), picture_path(picture.id)
   %br

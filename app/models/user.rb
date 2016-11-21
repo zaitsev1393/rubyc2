@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :likes,    dependent: :destroy
   has_many :events
 
+  # def to_param
+  #   email
+  # end
+
 end

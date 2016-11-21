@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   before_action :find_picture
   before_action :find_comment, :only => [:destroy]
 
+  def index
+    @comments = Comment.order(:created_at)
+  end
+
   def show
     @comments = User.find(params[:id]).comments
     @user = User.find(params[:id])

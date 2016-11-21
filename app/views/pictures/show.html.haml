@@ -6,11 +6,12 @@
 .image-center
   =link_to image_tag(@picture.url, class: 'show-img'), @next
 
-.page-center.large
-  =button_to "Like", { controller: 'likes', action: 'create', :user_id => current_user.id, :picture_id => @picture.id }, :method => 'post' 
-  =link_to "<<< Prev", @prev
-  =" | "
-  =link_to "Next >>>", @next
+=if current_user
+  .page-center.large
+    =button_to "Like", { controller: 'likes', action: 'create', :user_id => current_user.id, :picture_id => @picture.id }, :method => 'post' 
+    =link_to "<<< Prev", @prev
+    =" | "
+    =link_to "Next >>>", @next
 
 
 
