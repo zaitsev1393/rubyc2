@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users,
              :controllers => { :sessions => "new_devise/sessions", :omniauth_callbacks => 'omniauth_callbacks' }
+             
   resources :pictures,   only: [:index, :show, :destroy]
   resources :categories, only: [:index, :show]
   resources :comments,   only: [:new, :create, :destroy, :index, :show]
@@ -15,7 +16,5 @@ Rails.application.routes.draw do
     end
     
   root 'pictures#index'
-
-  get '/auth/facebook/callback', to: 'services#create'
 
 end

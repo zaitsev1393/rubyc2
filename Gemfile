@@ -20,6 +20,7 @@ gem 'kaminari'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'omniauth-vkontakte'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -24,6 +24,12 @@
         =link_to'Log Out', destroy_user_session_path, :method => :delete
     - else
       %li.nav-item
+        =link_to image_tag('http://zismo.biz/uploads/monthly_08_2016/post-29246-0-19281900-1471268844.png', class: 'image-thumb'), user_vkontakte_omniauth_authorize_path    
+      %li.nav-item
+        =link_to image_tag('facebook1.png', class: 'image-thumb'), user_facebook_omniauth_authorize_path
+      %li.nav-item
+        =link_to image_tag('twitter1.png', class: 'image-thumb'), user_twitter_omniauth_authorize_path
+      %li.nav-item
         =link_to'Log In', new_user_session_path
       %li.nav-item.navbar-margin
         =link_to 'Sign Up', new_user_registration_path

@@ -18,7 +18,7 @@
 -@comments.each do |comment|
   .comment-block
     .comment-author
-      =link_to comment.user.email, user_path(comment.user)
+      =link_to name_or_email(comment), user_path(comment.user)
     .comment
       =comment.text
     .delete-button

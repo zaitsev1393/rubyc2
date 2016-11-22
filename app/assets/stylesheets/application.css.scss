@@ -16,3 +16,23 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.image-thumb {
+	width: 45px;
+	margin: -25px -10px;
+}
+
+#logger {
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 10px;
+	border-radius: 10px;
+	position: fixed;
+	top: 200px;
+	left: 25px;
+	background-color: black;
+}
+
+.log {
+	font-size: 12px;
+}

@@ -9,7 +9,7 @@ class User < ApplicationRecord
          :trackable,
          :validatable,
          :omniauthable,
-         :omniauth_providers => [:facebook, :twitter]
+         :omniauth_providers => [:facebook, :twitter, :vkontakte]
 
   has_many :comments, dependent: :destroy
   has_many :likes,    dependent: :destroy
@@ -21,11 +21,14 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid      = auth.uid
-      if auth.provider == 'twitter'
-        user.name  = auth.info.name
-        user.email = "#{auth.info.name}@example.com" 
+      
+      if auth.provider != 'facebook'
+        user.name   = auth.info.name
+        user.email  = "#{auth.info.name}@example.com" 
+      else
+        user.email  = auth.info.email 
       end
-      user.email    = auth.info.email if auth.provider == 'facebook' 
+      
       user.password = Devise.friendly_token[0,20]
     end
   end
