@@ -1,6 +1,6 @@
 %tr
   %th
-    =link_to user.email, user_path(user.id)
+    =link_to (user.provider == 'twitter' ? user.name : user.email), user_path(user.id)
   %th
     =link_to "Navigation", user_path(user.id)
   %th

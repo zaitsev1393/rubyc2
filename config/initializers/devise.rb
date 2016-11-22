@@ -16,5 +16,6 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
   config.omniauth :facebook, "317310668662280", "44f641e5d1a0c8c2fc86b03699173dde"
+  config.omniauth :twitter, "kN6I6UmgeKDgX8jZYGv6sNixE", "nyopuqPxydAPDfpLrEuaTKhPBGxq40ap2EkjaRgFW15GKtQTzz"
 
 end
