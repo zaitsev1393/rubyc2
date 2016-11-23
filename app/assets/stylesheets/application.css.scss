@@ -12,27 +12,130 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.image-thumb {
-	width: 45px;
-	margin: -25px -10px;
+body {
+	background-image: image-url('back3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100%;
 }
+
+img {
+	&:hover {
+		cursor: pointer;
+	};
+}
+
+
+/*### Bootstrap gutter*/
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*###*/
+
+.large { font-size:  50px; }
+.big   { font-size:  25px; }
+.big2  { font-size:  16px; }
+.top   { margin-top: 150px;}
+
+
+.layout-wide {
+	margin: 0 auto;
+	width: 60%;
+	margin-top: 300px;
+}
+
+
+.layout-center {
+	text-align: center;
+}
+
+.page-center {
+	text-align: center;
+}
+
+
+/*
+### Wanna see some boobs ###
+*/
+.wanna-see {
+	position: fixed;
+	left: 250px;
+	top: -100px;
+}
+
+/*
+### Logger Style ###
+*/
 
 #logger {
 	color: white;
 	font-family: "Lucida Console", Monaco, monospace;
 	padding: 10px;
-	border-radius: 10px;
+
 	position: fixed;
-	top: 200px;
-	left: 25px;
+	top: 700px;
+	right: 0;
 	background-color: black;
 }
 
 .log {
 	font-size: 12px;
 }
+
+#hidebutton {
+	position: fixed;
+	top: 350px;
+	left: 25px;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	font-family: "Lucida Console", Monaco, monospace;
+	&:hover {
+		background-color: black;
+		color: snow;
+		cursor: pointer;
+	}
+}
+
+#showbutton {
+	position: fixed;
+	top: 350px;
+	left: 150px;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	font-family: "Lucida Console", Monaco, monospace;
+	&:hover {
+		background-color: black;
+		color: snow;
+		cursor: pointer;
+	}
+}
+
+
+/*### bottom navbar margin ###*/
+.jump {
+	bottom: 50px;
+}
+

@@ -1,0 +1,21 @@
+.navbar a{
+	font-family: 'Nunito', sans-serif;
+	color: snow;
+	transition: 0.5s;
+	&:hover {
+		color: black;
+		}
+}
+
+.navbar {
+	background-color: rgba(1, 1, 1, 0.5);
+	font-size: 16px;
+}
+
+.signup {
+	background-color: rgba(0, 255, 128, 0.75);
+}
+
+.navbar li.nav-item {
+	font-size: 24px;
+}

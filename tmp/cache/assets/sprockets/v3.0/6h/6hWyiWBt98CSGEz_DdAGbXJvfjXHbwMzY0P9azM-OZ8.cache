@@ -1,0 +1,9 @@
+I"{(function() {
+  $(function() {
+    return $("#logger").animate({
+      opacity: 0
+    }, 1000);
+  });
+
+}).call(this);
+:ET

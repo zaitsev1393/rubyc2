@@ -1,0 +1,11 @@
+I"²(function() {
+  $(function() {
+    return $('#logbutton').click(function() {
+      return $('#logger').makecolor({
+        color: "green"
+      });
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,16 @@
+I""(function() {
+  $(function() {
+    $("#hidebutton").click(function() {
+      return $("#logger").animate({
+        'opacity': 0
+      });
+    });
+    return $("#showbutton").click(function() {
+      return $("#logger").animate({
+        'opacity': 1
+      });
+    });
+  });
+
+}).call(this);
+:ET

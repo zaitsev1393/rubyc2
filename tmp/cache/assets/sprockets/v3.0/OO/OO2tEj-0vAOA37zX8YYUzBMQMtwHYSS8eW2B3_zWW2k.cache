@@ -1,0 +1,11 @@
+I"®(function() {
+  $(function() {
+    return $("#logbutton").click(function() {
+      return $("#logger").animate({
+        'opacity': 0
+      });
+    });
+  });
+
+}).call(this);
+:ET

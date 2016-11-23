@@ -1,0 +1,9 @@
+I"{(function() {
+  $(function() {
+    return $("#logger").animate({
+      width: 500
+    }, 2000);
+  });
+
+}).call(this);
+:ET

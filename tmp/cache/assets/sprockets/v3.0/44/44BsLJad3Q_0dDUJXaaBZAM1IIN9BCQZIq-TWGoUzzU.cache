@@ -1,0 +1,5 @@
+I"J(function() {
+  $('#logbutton').click(alert('123'));
+
+}).call(this);
+:ET

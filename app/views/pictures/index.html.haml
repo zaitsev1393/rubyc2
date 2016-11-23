@@ -1,9 +1,23 @@
-.page-center
-  =paginate @pictures
+.modal.fade#pictureModal
+  .modal-dialog
+    .modal-content
+      .modal-header
+      .modal-body
+      .modal-footer
 
-%br
+   
+.containter{style: "margin-top: 100px"}
+  .row
+    .col-md-1
+    =render @pictures
 
-=render @pictures
+.container-fluid
+  .row
+    .col-md-4
+    .col-md-4
+      =paginate @pictures
 
-.page-center
-  =paginate @pictures
+:javascript
+  $('img').on('click', function(){
+  	$('#pictureModal').modal('show');
+  });

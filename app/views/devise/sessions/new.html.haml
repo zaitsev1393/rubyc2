@@ -1,17 +1,28 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.container-fluid
+  .row.top
+    .col-md-5
+    .col-md-1
+      .login-form
+        %h2.login Log in
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field
+            %br
+            = f.email_field :email, autofocus: true, placeholder: "Email"
+          .field
+            %br
+            = f.password_field :password, autocomplete: "off", placeholder: "Password"
+          - if devise_mapping.rememberable?
+            .field.checkbox
+              = f.check_box :remember_me
+              = f.label :remember_me
+          .actions
+            %b
+              = f.submit "Log in", class: "login-button"
+        = render "devise/shared/links"
+        .social
+          %li.social-elem
+            =link_to raw('<i class="fa fa-vk" aria-hidden="true"></i>'), user_vkontakte_omniauth_authorize_path, class: 'large'
+          %li.social-elem
+            =link_to raw('<i class="fa fa-twitter" aria-hidden="true"></i>'), user_facebook_omniauth_authorize_path, class: 'large'
+          %li.social-elem
+            =link_to raw('<i class="fa fa-facebook-official" aria-hidden="true"></i>'), user_twitter_omniauth_authorize_path, class: 'large'

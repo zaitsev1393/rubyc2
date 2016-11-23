@@ -1,4 +1,12 @@
-.image-center
+.col-md-2.align
   -if picture.category
-    =link_to image_tag(picture.url, class: "middle-img"), picture_path(picture.id)
-  %br
+    .cropper
+      =image_tag picture.url, class: "middle-img"
+      .commented
+        ="Last comment: #{picture.comments&.last&.text}"
+        %br
+        ="Author: #{picture.comments&.last&.user&.email}"
+      .img-info
+        .bigheart
+          %i.fa.fa-heart{"aria-hidden" => "true"}
+
