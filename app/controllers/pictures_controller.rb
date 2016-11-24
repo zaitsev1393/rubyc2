@@ -1,7 +1,18 @@
 class PicturesController < ApplicationController
 
+  # def new
+  #   @picture = Picture.new
+  # end
+
+  def create
+    @picture = Picture.new(picture_params) if params
+    @picture.save
+  end
+
   def index
     @pictures = Picture.order(:likes_count => :desc).page(params[:page])
+    @picture = Picture.new
+    @categories = Category.all
   end
 
   def show
@@ -20,7 +31,10 @@ class PicturesController < ApplicationController
   def destroy
   end
 
-  def new
+private
+
+  def picture_params
+    params.require(:picture).permit(:image, :category_id)
   end
 
 end

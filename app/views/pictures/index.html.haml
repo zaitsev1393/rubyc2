@@ -3,7 +3,7 @@
     .modal-content
       .modal-header
       .modal-body
-      .modal-footer
+      .modal-footer 
 
    
 .containter{style: "margin-top: 100px"}
@@ -11,13 +11,14 @@
     .col-md-1
     =render @pictures
 
-.container-fluid
-  .row
-    .col-md-4
-    .col-md-4
-      =paginate @pictures
+.creator
+  =form_for @picture do |f|
+    -@category = @categories.first
+    =f.select :category_id, options_from_collection_for_select(@categories, 'id', 'title')
+    =f.file_field :image
+    =f.submit 'Send'
 
-:javascript
-  $('img').on('click', function(){
-  	$('#pictureModal').modal('show');
-  });
+=paginate @pictures
+
+
+    

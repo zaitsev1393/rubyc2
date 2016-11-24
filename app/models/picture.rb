@@ -3,6 +3,8 @@ class Picture < ApplicationRecord
   has_many   :likes,      dependent: :destroy
   belongs_to :category
 
+  mount_uploader :image, ImageUploader
+
   def next
     self.class.where("id > ?", id).first
   end

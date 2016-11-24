@@ -1,0 +1,6 @@
+.container
+  .row
+    .col-md-2
+      =form_for @picture do |f|
+        =f.file_field :image
+        =f.submit 'Send'
