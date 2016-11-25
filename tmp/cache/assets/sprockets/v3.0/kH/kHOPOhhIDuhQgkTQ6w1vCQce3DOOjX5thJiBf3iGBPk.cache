@@ -1,0 +1,7 @@
+I"](function() {
+  $(function() {
+    return $('kal').append('123');
+  });
+
+}).call(this);
+:ET

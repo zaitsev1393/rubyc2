@@ -1,7 +1,0 @@
-I"a(function() {
-  $(document).ready(function() {
-    return alert(123);
-  });
-
-}).call(this);
-:ET

@@ -1,9 +1,0 @@
-I"s(function() {
-  $(function() {
-    return $("#logger").css({
-      'opacity': 0
-    });
-  });
-
-}).call(this);
-:ET

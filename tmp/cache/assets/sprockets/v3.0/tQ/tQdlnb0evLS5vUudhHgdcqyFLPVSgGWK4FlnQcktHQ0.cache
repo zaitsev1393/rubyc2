@@ -1,0 +1,7 @@
+I"\(function() {
+  $(function() {
+    return $("#new_link").hide();
+  });
+
+}).call(this);
+:ET

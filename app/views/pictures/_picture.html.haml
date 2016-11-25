@@ -1,7 +1,7 @@
 .col-md-2.align
   -if picture.category
     .cropper
-      =image_tag (picture.category.title + '/' + picture.image_identifier.to_s), class: "middle-img"
+      =link_to image_tag(picture.category.title + '/' + picture.image_identifier, class: 'middle-img'), picture, {remote: true, class: 'picture_link'}
       .commented
         ="Last comment: #{picture.comments&.last&.text}"
         %br
@@ -9,4 +9,6 @@
       .img-info
         .bigheart
           %i.fa.fa-heart{"aria-hidden" => "true"}
+        
+
 

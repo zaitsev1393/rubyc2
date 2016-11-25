@@ -17,7 +17,8 @@
 //= require_tree .
 
   $(document).ready(function(){
-    $('img').on('click', function(){
-      $('#pictureModal').modal('show');
-    });
+  	$(".picture_link").click(function(){
+  		$("#pictureModal").modal('show');
+  		// $('.modal-body').append('123');
+  	})
   })

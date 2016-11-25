@@ -1,9 +1,0 @@
-I"ž(function() {
-  $(document).on("page:change", function() {
-    return $("#logbutton").click(function() {
-      return alert(1);
-    });
-  });
-
-}).call(this);
-:ET

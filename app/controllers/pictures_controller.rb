@@ -1,9 +1,5 @@
 class PicturesController < ApplicationController
 
-  # def new
-  #   @picture = Picture.new
-  # end
-
   def create
     @picture = Picture.new(picture_params) if params
     @picture.save
@@ -26,10 +22,12 @@ class PicturesController < ApplicationController
       @prev = @picture == Picture.first ? Picture.last : @picture.prev
 
     @comments = @picture.comments
+
   end
 
   def destroy
   end
+
 
 private
 

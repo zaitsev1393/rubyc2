@@ -1,0 +1,11 @@
+=render 'pictures/shared/modal'
+
+.container
+  .row
+    .col-md-5
+    =link_to 'Ajax Modal', ajax_path, {remote: true, 'data-toggle' => 'modal', 'data-target' => '#pictureModal', class: 'ajax'}
+
+:javascript
+  $('.ajax').click(function(){
+    $('.modal-body').append('123');
+  });

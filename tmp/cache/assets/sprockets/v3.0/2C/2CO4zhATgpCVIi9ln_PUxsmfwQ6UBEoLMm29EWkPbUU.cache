@@ -1,7 +1,0 @@
-I"e(function() {
-  $('#logbutton').click(function() {
-    return alert(123);
-  });
-
-}).call(this);
-:ET

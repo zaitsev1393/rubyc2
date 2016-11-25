@@ -1,0 +1,11 @@
+I"ª(function() {
+  $(function() {
+    return $.ajax({
+      url: '/pictures'
+    }).done(function(html) {
+      return $(".kal").append(html);
+    });
+  });
+
+}).call(this);
+:ET

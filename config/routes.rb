@@ -10,13 +10,11 @@ Rails.application.routes.draw do
   resources :events,     only: [:index, :show]
   resources :services,   only: [:index, :create]
 
-
     resources :pictures do
       resources :comments
     end
     
   root 'pictures#index'
 
-  get 'test/new_release' => 'test#new_release', as: new_release
-
+   get "modal" => "pictures#modal_picture", as: 'modal'
 end

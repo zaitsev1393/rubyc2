@@ -1,11 +1,5 @@
-.modal.fade#pictureModal
-  .modal-dialog
-    .modal-content
-      .modal-header
-      .modal-body
-      .modal-footer 
+=render 'pictures/shared/modal'
 
-   
 .containter{style: "margin-top: 100px"}
   .row
     .col-md-1
@@ -13,10 +7,11 @@
 
 .creator
   =form_for @picture do |f|
-    -@category = @categories.first
     =f.select :category_id, options_from_collection_for_select(@categories, 'id', 'title')
     =f.file_field :image
     =f.submit 'Send'
+
+
 
 =paginate @pictures
 

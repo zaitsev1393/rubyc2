@@ -1,0 +1,18 @@
+.page-center
+  =image_tag(@picture.category.title + '/' + @picture.image_identifier, class: 'modal-img')
+-@picture.comments.each do |comment|
+  .modal-comment-container
+    .comment-avatar
+      =image_tag('http://plainicon.com/dboard/userprod/2802_db2aa/prod_thumb/plainicon.com-39365-256px.png', size: '50x50')
+    .content-container
+      .comment-name
+        =link_to comment.user.email, user_path(comment.user.id)
+      .comment-text
+        =comment.text
+
+-if current_user
+  =form_for([@picture, @picture.comments.build]) do |f|
+    =f.label 'Write comment', class: 'comment-label'
+    =f.text_field :text, class: 'comment-textfield'
+    =f.submit 'Send comment', { remote: true, id: 'comment-submit' }
+

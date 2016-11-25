@@ -1,0 +1,9 @@
+I"Š(function() {
+  $.ajax({
+    url: "http://google.com"
+  }).done(function(html) {
+    return $(".kal").append(html);
+  });
+
+}).call(this);
+:ET

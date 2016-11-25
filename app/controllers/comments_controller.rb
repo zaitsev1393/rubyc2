@@ -15,7 +15,6 @@ class CommentsController < ApplicationController
     @comment = @picture.comments.create(params[:comment].permit(:text))
     @comment.user_id = current_user.id
     @comment.save
-    redirect_to picture_path(params[:picture_id])
   end
 
   def destroy

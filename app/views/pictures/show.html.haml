@@ -4,7 +4,7 @@
   ="Likes: #{@picture.likes.count}"
 
 .image-center
-  =link_to image_tag(@picture.url, class: 'show-img'), @next
+  =link_to image_tag(@picture.category.title + '/' + @picture.image_identifier, class: 'show-img'), @next
 
 -if current_user
   .page-center.large
