@@ -7,4 +7,4 @@
     .comment-text
       =@comment.text
   .comment-delete-button
-    =link_to 'Delete', @comment, method: :delete
+    =link_to 'Delete', @comment, method: :delete, remote: true, class: 'delete-button'

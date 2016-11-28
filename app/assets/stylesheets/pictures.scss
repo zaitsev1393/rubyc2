@@ -127,6 +127,36 @@
 }
 
 /* Modal image */
+
+.image-container {
+	position: relative;
+}
+
+.image-like {
+	position: absolute;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	opacity: 0;
+	line-height: 200px;
+	top: 25%;
+	left: 35%;
+
+	transition: 0.3s;
+
+	&:hover {
+		opacity: 1;
+		background-color: rgba(1,1,1,0.5);
+		cursor: pointer;
+	};
+}
+
+.greatheart {
+	font-size: 100px;
+	color: red;
+}
+
 .modal-img {
 	width: 500px;
 	padding-bottom: 25px;

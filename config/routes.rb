@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :comments,   only: [:new, :create, :destroy, :index, :show]
   resources :users,      only: [:show, :index, :destroy]
   resources :likes,      only: [:new, :create, :show]
-  resources :events,     only: [:index, :show]
   resources :services,   only: [:index, :create]
 
     resources :pictures do
@@ -16,5 +15,7 @@ Rails.application.routes.draw do
     
   root 'pictures#index'
 
-   get "modal" => "pictures#modal_picture", as: 'modal'
+  get '/users/:id/events' => 'events#index'
+  get '/events'           => 'users#index'
+
 end
