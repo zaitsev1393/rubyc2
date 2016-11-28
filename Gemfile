@@ -23,7 +23,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
 gem 'font-awesome-rails'
 gem 'carrierwave'
-
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platform: :mri

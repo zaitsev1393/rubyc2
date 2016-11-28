@@ -9,10 +9,7 @@
         =link_to comment.user.email, user_path(comment.user.id)
       .comment-text
         =comment.text
+    .comment-delete-button
+      =link_to 'Delete', comment, method: :delete, remote: true, class: 'delete-button'
 
--if current_user
-  =form_for([@picture, @picture.comments.build]) do |f|
-    =f.label 'Write comment', class: 'comment-label'
-    =f.text_field :text, class: 'comment-textfield'
-    =f.submit 'Send comment', { remote: true, id: 'comment-submit' }
-
+=render 'comments/comment_form'

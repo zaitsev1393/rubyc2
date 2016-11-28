@@ -19,8 +19,12 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    redirect_to picture_path(params[:picture_id])
-    p params
+
+    respond_to do |format|
+      format.html { redirect_to request.referer }
+      format.js
+    end
+
   end
 
 private

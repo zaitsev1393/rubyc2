@@ -19,6 +19,5 @@
   $(document).ready(function(){
   	$(".picture_link").click(function(){
   		$("#pictureModal").modal('show');
-  		// $('.modal-body').append('123');
   	})
   })

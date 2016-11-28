@@ -21,8 +21,6 @@ class PicturesController < ApplicationController
       @next = @picture == Picture.last ? Picture.first : @picture.next
       @prev = @picture == Picture.first ? Picture.last : @picture.prev
 
-    @comments = @picture.comments
-
   end
 
   def destroy
