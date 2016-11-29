@@ -24,6 +24,9 @@ gem 'omniauth-vkontakte'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'faker'
+gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development, :test do
   gem 'byebug', platform: :mri
