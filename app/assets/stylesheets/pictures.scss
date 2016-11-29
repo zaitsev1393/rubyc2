@@ -211,3 +211,31 @@
 .comment-delete-button {
 	float: right;
 }
+
+.category-name {
+	display: inline-block;
+	text-align: left;
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.subscribe-button {
+	display: inline-block;
+	text-align: right;
+	background: DarkSlateBlue;
+	color: snow;
+	font-weight: bold;
+	padding: 5px;
+	margin-bottom: 5px;	
+	border-radius: 10px;
+
+	transition: 0.3s;
+
+	&:hover {
+		color: DarkSlateBlue;
+		background: snow;
+		border: 1px solid gray;
+		text-decoration: none;
+	};
+}

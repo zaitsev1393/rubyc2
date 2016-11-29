@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users,
-             :controllers => { :sessions => "new_devise/sessions", :omniauth_callbacks => 'omniauth_callbacks' }
+             :controllers => { :sessions =>           "new_devise/sessions", 
+                               :omniauth_callbacks => "omniauth_callbacks",
+                               :registrations =>               "new_devise/registrations" }
+                               
              
-  resources :pictures,   only: [:index, :show, :destroy, :new, :create]
+  resources :pictures,   only: [:index, :show, :destroy, :new, :create, :subscribe]
   resources :categories, only: [:index, :show]
   resources :comments,   only: [:new, :create, :destroy, :index, :show]
-  resources :users,      only: [:show, :index, :destroy]
+  resources :users,      only: [:show, :index, :destroy, :create]
   resources :likes,      only: [:new, :create, :show]
   resources :services,   only: [:index, :create]
 
@@ -17,5 +20,6 @@ Rails.application.routes.draw do
 
   get '/users/:id/events' => 'events#index'
   get '/events'           => 'users#index'
+  get '/subscribe'        => 'pictures#subscribe'
 
 end

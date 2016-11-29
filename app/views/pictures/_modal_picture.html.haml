@@ -4,8 +4,9 @@
       .greatheart
         %i.fa.fa-heart{"aria-hidden" => "true"}
     =image_tag(@picture.category.title + '/' + @picture.image_identifier, class: 'modal-img')
-
-
+  .category-name
+    =@picture.category.title.capitalize
+  =link_to 'Subscribe', subscribe_path(:user_id => current_user.id, :category_id => @picture.category.id), class: 'subscribe-button'
 
 -@picture.comments.each do |comment|
   .modal-comment-container    
@@ -18,6 +19,8 @@
         =comment.text
     .comment-delete-button
       =link_to 'Delete', comment, method: :delete, remote: true, class: 'delete-button'
+
+
 
 
 =render 'comments/comment_form'
