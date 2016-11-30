@@ -6,10 +6,12 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  
+
   %body
     =render 'layouts/shared/boobs'
-
+    .lang
+      =link_to_unless_current "English", locale: "en"
+      =link_to_unless_current "Русский", locale: "ru"
     = yield
     =render 'layouts/shared/navbar'
 

@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
         UserMailer.image_added(user, @picture).deliver_now
       end
     end
-
+    p '-------date shet created'
   end
 
   def index
@@ -49,7 +49,7 @@ class PicturesController < ApplicationController
 private
 
   def picture_params
-    params.require(:picture).permit(:image, :category_id)
+    params.require(:picture).permit(:image, :category_id, :url)
   end
 
 end

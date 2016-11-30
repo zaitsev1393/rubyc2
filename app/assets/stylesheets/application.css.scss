@@ -1,22 +1,24 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require font-awesome
- */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'font-awesome';
+@import 'categories';
+@import 'category';
+@import 'comments';
+@import 'cursor-blink';
+@import 'custom';
+@import 'events';
+@import 'fonts';
+@import 'likes';
+@import 'login-form';
+@import 'main';
+@import 'navbar';
+@import 'omniauth_callbacks';
+@import 'pictures';
+@import 'services';
+@import 'test';
+@import 'users';
+@import 'welcome';
 
 body {
 	background-image: image-url('back3.jpg');
@@ -26,6 +28,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: 100%;
+	font-size: 14px;
 }
 
 img {
@@ -34,6 +37,17 @@ img {
 	};
 }
 
+.lang {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 100px;
+	padding: 10px;
+	background: rgba(1,1,1,0.5);
+	font-size: 16px;
+	font-weight: bold;
+	color: snow;
+}
 
 /*### Bootstrap gutter*/
 .row.no-gutter {

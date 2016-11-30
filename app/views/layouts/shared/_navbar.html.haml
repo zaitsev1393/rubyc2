@@ -4,26 +4,24 @@
       %a{:href => root_path}
         %b.logo Cats and Boobs
         %span.sr-only (current)
-    %li
-
-    %li
-      =link_to "Categories", categories_path
-    %li
-      =link_to "Pictures", pictures_path
-    %li
-      =link_to "Comments", comments_path
-    %li
-      =link_to "Users", users_path
     -if current_user
       %li
-        =link_to "Events", events_path
+        =link_to t(:categories), categories_path
       %li
-        =link_to "Profile", user_path(current_user.id)
-  
+        =link_to t(:pictures), pictures_path
+      %li
+        =link_to t(:comments), comments_path 
+      %li
+        =link_to t(:users), users_path
+      %li
+        =link_to t(:events), events_path
+      %li
+        =link_to t(:profile), user_path(current_user.id)
+    
   %ul.nav.navbar-nav.navbar-right
     -if current_user
       %li.nav-item.navbar-margin
-        =link_to'Log Out', destroy_user_session_path, :method => :delete
+        =link_to t(:logout), destroy_user_session_path, :method => :delete
     - else
       / %li.nav-item
       /   =link_to image_tag('http://zismo.biz/uploads/monthly_08_2016/post-29246-0-19281900-1471268844.png', class: 'image-thumb'), user_vkontakte_omniauth_authorize_path    
@@ -32,9 +30,9 @@
       / %li.nav-item
       /   =link_to image_tag('twitter1.png', class: 'image-thumb'), user_twitter_omniauth_authorize_path
       %li.nav-item
-        =link_to'Log In', new_user_session_path
+        =link_to t(:login), new_user_session_path
       %li.nav-item.navbar-margin
-        =link_to 'Sign Up', new_user_registration_path, class: 'signup'
+        =link_to t(:sign_up), new_user_registration_path, class: 'signup'
 
 / %nav.navbar.navbar-fixed-bottom
 /   #logo

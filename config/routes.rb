@@ -14,14 +14,17 @@ Rails.application.routes.draw do
   resources :likes,      only: [:new, :create, :show]
   resources :services,   only: [:index, :create]
 
+
     resources :pictures do
       resources :comments
     end
-    
+
+
   root 'pictures#index'
 
   get '/users/:id/events' => 'events#index'
   get '/events'           => 'users#index'
   get '/subscribe'        => 'pictures#subscribe'
+
 
 end

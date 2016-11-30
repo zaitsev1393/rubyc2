@@ -3,9 +3,9 @@
     .cropper
       =link_to image_tag(picture.category.title + '/' + picture.image_identifier, class: 'middle-img'), picture, {remote: true, class: 'picture_link'}
       .commented
-        ="Last comment: #{picture.comments&.last&.text}"
+        ="#{t(:last_comment)}: #{picture.comments&.last&.text}"
         %br
-        ="Author: #{picture.comments&.last&.user&.email}"
+        ="#{t(:author)}: #{picture.comments&.last&.user&.email}"
       .img-info
         .bigheart
           %i.fa.fa-heart{"aria-hidden" => "true"}
