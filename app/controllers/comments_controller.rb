@@ -14,7 +14,9 @@ class CommentsController < ApplicationController
   def create
     @comment = @picture.comments.create(params[:comment].permit(:text))
     @comment.user_id = current_user.id
-    @comment.save
+    if @comment.save
+      Resque.enqueue(Sleeper, 5)
+    end
   end
 
   def destroy

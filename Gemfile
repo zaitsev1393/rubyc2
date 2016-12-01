@@ -31,6 +31,10 @@ gem 'active_skin'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8.1'
 gem 'curb', '~> 0.9.3'
 gem 'pusher'
+gem 'resque'
+gem 'resque-scheduler'
+gem 'resque-web', require: 'resque_web'
+gem 'redis'
 
 group :development, :test do
   gem 'byebug', platform: :mri
