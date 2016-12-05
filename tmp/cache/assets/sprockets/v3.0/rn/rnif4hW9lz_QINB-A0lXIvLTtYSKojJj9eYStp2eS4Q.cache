@@ -1,9 +1,0 @@
-I"«(function() {
-  $(function() {
-    return $(a[data - remote]).on("ajax:success", function(e, data, statis, xhr) {
-      return alert('kal');
-    });
-  });
-
-}).call(this);
-:ET

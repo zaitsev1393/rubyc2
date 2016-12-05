@@ -1,7 +1,0 @@
-I"T(function() {
-  $(function() {
-    return $("a").hide();
-  });
-
-}).call(this);
-:ET

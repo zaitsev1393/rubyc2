@@ -1,7 +1,0 @@
-I"a(function() {
-  $(function() {
-    return $("a[data-remote]").hide();
-  });
-
-}).call(this);
-:ET

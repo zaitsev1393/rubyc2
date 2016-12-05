@@ -1,9 +1,9 @@
 %tr
   -if current_page?(controller: 'comments', action: 'index')
     %td
-      =link_to name_or_email(comment), user_path(comment.user.id)
+      =link_to name_or_email(comment), user_path(comment.user)
   %td{style: 'width: 400px'}
-    =link_to image_tag(comment.picture.url, class: 'img-small'), picture_path(comment.picture.id)
+    =image_tag(comment.picture.category.title + '/' + comment.picture.image_identifier, class: 'small-img')
   %td
     =comment.text
   %td

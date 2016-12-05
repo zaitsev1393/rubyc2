@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  before_action :find_picture
   before_action :find_comment, :only => [:destroy]
 
   def index
@@ -21,10 +20,6 @@ class CommentsController < ApplicationController
   end
 
 private
-
-  def find_picture
-    @picture = Picture.find(params[:picture_id])
-  end
 
   def find_comment
     @comment = Comment.find(params[:id])

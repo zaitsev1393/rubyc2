@@ -1,9 +1,0 @@
-I"•(function() {
-  $(function() {
-    return $("a[data-remote]").click(function() {
-      return $('.kal').append('123');
-    });
-  });
-
-}).call(this);
-:ET
