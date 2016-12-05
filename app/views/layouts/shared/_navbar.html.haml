@@ -5,8 +5,14 @@
         %b.logo Cats and Boobs
         %span.sr-only (current)
     -if current_user
-      %li
-        =link_to t(:categories), categories_path
+      %li.dropdown
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          Categories
+          %span.caret
+        %ul.dropdown-menu
+          -@categories.each do |cat|
+            %li
+              =link_to cat.title.capitalize, category_path(cat.id)
       %li
         =link_to t(:pictures), pictures_path
       %li

@@ -33,6 +33,10 @@ img {
 	};
 }
 
+table tr{
+	background: rgba(255, 255, 255, 0.5);
+}
+
 /* locale switcher */
 .lang {
 	position: absolute;
@@ -71,7 +75,6 @@ img {
 .layout-wide {
 	margin: 0 auto;
 	width: 60%;
-	margin-top: 300px;
 }
 
 

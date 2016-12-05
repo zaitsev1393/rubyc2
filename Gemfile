@@ -38,8 +38,11 @@ gem 'redis'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 end
 
 group :development do

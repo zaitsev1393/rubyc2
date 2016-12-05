@@ -1,22 +1,23 @@
-.profile-author
-  =@user.email
+.layout-wide
+  .profile-author
+    =@user.email
 
-.big
-  Last activity
+  .big
+    Last activity
 
--if @user.events.count
-  %table.table.table-striped.table-hover
-    %tr
-      %th
-        Address
-      %th
-        Created
-      -@user.events.each do |event|
-        %tr
-          %td
-            =event.name
-          %td
-            =time_ago_in_words(event.created_at)
--else 
-  %p
-    Nothing else happened
+  -if @user.events.count
+    %table.table.table-striped.table-hover
+      %tr
+        %th
+          Address
+        %th
+          Created
+        -@user.events.each do |event|
+          %tr
+            %td
+              =event.name
+            %td
+              =time_ago_in_words(event.created_at)
+  -else 
+    %p
+      Nothing else happened
