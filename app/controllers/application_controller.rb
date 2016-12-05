@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  # Turned off to not fill the db with events records
+
   def write_event
     # @user = User.find(current_user.id)
     # @event = Event.new
@@ -19,7 +21,6 @@ private
 
   def set_locale
     I18n.locale = params[:locale] if params[:locale].present?
-    # I18n.locale = request.subdomain
   end
 
   def default_url_options(options = {})

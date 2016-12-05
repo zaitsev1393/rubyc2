@@ -1,3 +1,5 @@
+/*Navbar links*/
+
 .navbar a{
 	font-family: 'Nunito', sans-serif;
 	color: snow;
@@ -8,15 +10,26 @@
 		}
 }
 
+/*Common style*/
+
 .navbar {
 	background-color: rgba(1, 1, 1, 0.5);
 	font-size: 16px;
 }
 
+/*Signup button*/
+
 .signup {
 	background-color: rgba(0, 255, 128, 0.75);
 }
 
+/*Logo*/
+
 .navbar li.nav-item {
 	font-size: 24px;
+}
+
+/* Edge nav-element margin*/
+.navbar-margin {
+	margin-right: 25px;
 }

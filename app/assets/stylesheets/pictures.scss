@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*Pictures size styles*/
 
 .show-img {
 	width: 500px;
@@ -12,19 +13,14 @@
 	width: 250px;
 }
 
+
+
 .align {
 	text-align: center;
 }
 
-.cropper {
-	position: relative;
-	width: 250px;
-	
-	transition: 0.5s;
-	&:hover {
-		transform: scale(1.1);
-	};
-}
+
+/* Kaminari paginaton style*/
 
 .pagination {
 	position: absolute;
@@ -128,6 +124,19 @@
 
 /* Modal image */
 
+/*Picture wrapper inside modal window*/
+
+.cropper {
+	position: relative;
+	width: 250px;
+	
+	transition: 0.5s;
+	&:hover {
+		transform: scale(1.1);
+	};
+}
+
+
 .image-container {
 	position: relative;
 }
@@ -152,10 +161,14 @@
 	};
 }
 
+/* Heart on the top left corner of the preview picture*/
+
 .greatheart {
 	font-size: 100px;
 	color: red;
 }
+
+/*Picture in the modal*/
 
 .modal-img {
 	width: 500px;

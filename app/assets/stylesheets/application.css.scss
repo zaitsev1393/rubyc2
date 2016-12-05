@@ -6,7 +6,6 @@
 @import 'category';
 @import 'comments';
 @import 'cursor-blink';
-@import 'custom';
 @import 'events';
 @import 'fonts';
 @import 'likes';
@@ -15,10 +14,7 @@
 @import 'navbar';
 @import 'omniauth_callbacks';
 @import 'pictures';
-@import 'services';
-@import 'test';
 @import 'users';
-@import 'welcome';
 
 body {
 	background-image: image-url('back3.jpg');
@@ -37,6 +33,7 @@ img {
 	};
 }
 
+/* locale switcher */
 .lang {
 	position: absolute;
 	top: 50px;
@@ -63,12 +60,14 @@ img {
 
 /*###*/
 
+
+/*Font and elements sizes*/
 .large { font-size:  50px; }
 .big   { font-size:  25px; }
 .big2  { font-size:  16px; }
 .top   { margin-top: 150px;}
 
-
+/*Layout templates*/
 .layout-wide {
 	margin: 0 auto;
 	width: 60%;
@@ -86,7 +85,7 @@ img {
 
 
 /*
-### Wanna see some boobs ###
+### Wanna see some boobs position###
 */
 .wanna-see {
 	position: fixed;
@@ -111,45 +110,5 @@ img {
 
 .log {
 	font-size: 12px;
-}
-
-#hidebutton {
-	position: fixed;
-	top: 350px;
-	left: 25px;
-	border: 2px solid black;
-	border-radius: 10px;
-	width: 100px;
-	height: 25px;
-	text-align: center;
-	font-family: "Lucida Console", Monaco, monospace;
-	&:hover {
-		background-color: black;
-		color: snow;
-		cursor: pointer;
-	}
-}
-
-#showbutton {
-	position: fixed;
-	top: 350px;
-	left: 150px;
-	border: 2px solid black;
-	border-radius: 10px;
-	width: 100px;
-	height: 25px;
-	text-align: center;
-	font-family: "Lucida Console", Monaco, monospace;
-	&:hover {
-		background-color: black;
-		color: snow;
-		cursor: pointer;
-	}
-}
-
-
-/*### bottom navbar margin ###*/
-.jump {
-	bottom: 50px;
 }
 

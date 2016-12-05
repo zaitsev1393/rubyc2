@@ -38,6 +38,8 @@ gem 'redis'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rspec'
+  gem 'factory_girl_rails'
 end
 
 group :development do

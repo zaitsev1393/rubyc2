@@ -10,9 +10,6 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-   section do
-     h2 'Nokogiri'
-   end
 
   end
 end

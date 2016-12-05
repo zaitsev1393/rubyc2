@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
 
-
   def index
-    @events = Event.all
+    load_events
   end
 
-  def show
+private
+
+  def load_events
+    @events = Event.all
   end
 
 end

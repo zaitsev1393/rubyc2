@@ -1,29 +1,29 @@
 class UsersController < ApplicationController
-  before_action :find_user, :only => [:destroy]
-
-  # def create
-  #   @user = User.new(params[:user])
-  #   p "#--------{@user.email}"
-  #   UserMailer.welcome_email(@user).now if @user.save
-  # end
 
   def index
-    @users = User.all
+    load_users
   end
 
   def show
-    @user = User.find(params[:id])
-    @events = User.find(params[:id]).events
+    load_user
   end
 
   def destroy
-    @user.destroy
+    destroy_user
   end
 
-private
+private 
 
-  def find_user
+  def load_users
+    @users = User.all
+  end
+
+  def load_user
     @user = User.find(params[:id])
+  end
+
+  def destroy_user
+    User.find(params[:id]).destroy
   end
 
 end

@@ -4,14 +4,14 @@
 .big
   Last activity
 
--if @events.count != 0
+-if @user.events.count
   %table.table.table-striped.table-hover
     %tr
       %th
         Address
       %th
         Created
-      -@events.each do |event|
+      -@user.events.each do |event|
         %tr
           %td
             =event.name
