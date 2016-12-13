@@ -1,0 +1,117 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'font-awesome';
+@import 'categories';
+@import 'category';
+@import 'comments';
+@import 'cursor-blink';
+@import 'events';
+@import 'fonts';
+@import 'likes';
+@import 'login-form';
+@import 'main';
+@import 'navbar';
+@import 'omniauth_callbacks';
+@import 'pictures';
+@import 'users';
+
+body {
+	background-image: image-url('back3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100%;
+	font-size: 14px;
+}
+
+img {
+	&:hover {
+		cursor: pointer;
+	};
+}
+
+table tr{
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/* locale switcher */
+.lang {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 100px;
+	padding: 10px;
+	background: rgba(1,1,1,0.5);
+	font-size: 16px;
+	font-weight: bold;
+	color: snow;
+}
+
+/*### Bootstrap gutter*/
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*###*/
+
+
+/*Font and elements sizes*/
+.large { font-size:  50px; }
+.big   { font-size:  25px; }
+.big2  { font-size:  16px; }
+.top   { margin-top: 150px;}
+
+/*Layout templates*/
+.layout-wide {
+	margin: 0 auto;
+	width: 60%;
+}
+
+
+.layout-center {
+	text-align: center;
+}
+
+.page-center {
+	text-align: center;
+}
+
+
+/*
+### Wanna see some boobs position###
+*/
+.wanna-see {
+	position: fixed;
+	left: 250px;
+	top: -100px;
+}
+
+/*
+### Logger Style ###
+*/
+
+#logger {
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 10px;
+
+	position: fixed;
+	top: 700px;
+	right: 0;
+	background-color: black;
+}
+
+.log {
+	font-size: 12px;
+}
+

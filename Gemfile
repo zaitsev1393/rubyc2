@@ -35,6 +35,7 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'resque-web', require: 'resque_web'
 gem 'redis'
+gem 'annotate'
 
 group :development, :test do
   gem 'byebug', platform: :mri

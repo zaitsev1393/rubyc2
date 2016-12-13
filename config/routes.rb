@@ -9,7 +9,7 @@ Rails.application.routes.draw do
                                
              
   resources :pictures,   only: [:index, :show, :destroy, :new, :create, :subscribe]
-  resources :categories, only: [:index, :show]
+  resources :categories, only: [:show]
   resources :comments,   only: [:new, :create, :destroy, :index, :show]
   resources :users,      only: [:show, :index, :destroy, :create]
   resources :likes,      only: [:new, :create, :show]
