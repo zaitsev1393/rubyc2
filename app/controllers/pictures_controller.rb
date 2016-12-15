@@ -1,5 +1,7 @@
 class PicturesController < ApplicationController
 
+  protect_from_forgery except: :show
+
   def new
     @picture = Picture.new
   end
@@ -18,13 +20,16 @@ class PicturesController < ApplicationController
 
   def show
     @picture = Picture.find(params[:id])
+    respond_to do |format|
+      format.html { render "show" }
+      format.js
+    end
   end
 
   def subscribe
     @user = User.find(params[:user_id])
     @category = Category.find(params[:category_id])     
     @user.categories << @category unless @user.categories.find_by(id: @category.id)
-    redirect_to request.referer
   end
 
 private

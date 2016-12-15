@@ -1,7 +1,8 @@
 class LikesController < ApplicationController
 
   def new
-    redirect_to request.referer
+    @like = Like.new
+    redirect_to request.referer || '/' 
   end
 
   def show
@@ -10,7 +11,6 @@ class LikesController < ApplicationController
     @likes.each do |like|
       @pictures << Picture.find(like.picture_id).url
     end
-    p @pictures
   end
 
   def create
@@ -26,7 +26,7 @@ class LikesController < ApplicationController
     else
       @picture.likes.where(:user_id => params[:user_id]).destroy_all
     end
-    redirect_to request.referer
+    redirect_to request.referer || '/'
   end
 
 end

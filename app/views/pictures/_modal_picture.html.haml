@@ -3,7 +3,7 @@
     .image-like
       .greatheart
         %i.fa.fa-heart{"aria-hidden" => "true"}
-    =image_tag(@picture.category.title + '/' + @picture.image_identifier, class: 'modal-img')
+    =image_tag(@picture.category.title.to_s + '/' + @picture.image_identifier.to_s, class: 'modal-img')
   .category-name
     =@picture.category.title.capitalize
   =link_to 'Subscribe', subscribe_path(:user_id => current_user.id, :category_id => @picture.category.id), class: 'subscribe-button'

@@ -3,7 +3,7 @@
     %td
       =link_to name_or_email(comment), user_path(comment.user)
   %td{style: 'width: 400px'}
-    =image_tag(comment.picture.category.title + '/' + comment.picture.image_identifier, class: 'small-img')
+    =image_tag(comment.picture.category.title.to_s + '/' + comment.picture.image_identifier.to_s, class: 'small-img') if comment.picture
   %td
     =comment.text
   %td

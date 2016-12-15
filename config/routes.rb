@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users,
              :controllers => { :sessions =>           "new_devise/sessions", 
                                :omniauth_callbacks => "omniauth_callbacks",
-                               :registrations =>               "new_devise/registrations" }
+                               :registrations =>      "new_devise/registrations" }
                                
              
   resources :pictures,   only: [:index, :show, :destroy, :new, :create, :subscribe]
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :comments,   only: [:new, :create, :destroy, :index, :show]
   resources :users,      only: [:show, :index, :destroy, :create]
   resources :likes,      only: [:new, :create, :show]
-  resources :services,   only: [:index, :create]
+  resources :events,     only: [:index]
 
 
     resources :pictures do

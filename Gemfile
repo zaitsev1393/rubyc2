@@ -40,10 +40,15 @@ gem 'annotate'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 group :development do

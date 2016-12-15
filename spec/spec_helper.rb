@@ -102,6 +102,14 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-    config.include FactoryGirl::Syntax::Methods
+  config.before :each, :type => :controller do
+    sign_in user 
+  end
+
+  RSpec.shared_examples 'success response' do
+    it { expect(subject).to be_success }
+    it { expect(subject.status).to eq 200 }
+  end
+
 
 end
